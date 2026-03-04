@@ -1,0 +1,217 @@
+body {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+	background: url(../imagens/outrofundo.avif);
+    background-size: cover;
+	
+}
+
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:black;
+ 
+}
+
+.butao a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:17px;
+    position:relative;
+    padding-bottom:6px;
+}
+
+/* LINHA VERDE */
+.navbar nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:3px;
+    background:#2ecc71;
+    transition:0.3s;
+}
+
+.logocab{
+	color: white;
+    font-size:24px;
+    font-weight:bold;
+    /* match the nav/logo text too, if desired */
+    font-family: 'Georgia', serif;
+}
+
+.navbar nav a:hover::after{
+    width:100%;
+}
+
+.navbar nav a.ativo::after{
+    width:100%;
+}
+
+
+.menu-icon{
+	color: white;
+    margin-left:20px;
+    font-size:20px;
+}
+
+.header{
+    text-align:center;
+    padding:50px 20px 30px 20px;
+}
+
+
+
+.header h1{
+   display:inline-block;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:60px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    /* MESMO degradê do botão */
+    background: linear-gradient(to bottom, black, #8B0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    padding:18px 45px;
+    border-radius:12px;
+
+    background-color: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+section.centered {
+    width:80%;
+    margin:40px auto;
+    background:rgba(255,255,255,0.95);
+    display:flex;
+    gap:40px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.info {
+	flex: 1;
+}
+
+.linha-vertical{
+    width: 1px;     
+    height: 500px;   
+    background-color: #ccc;
+    border: none;
+    margin: 0 20px;
+}
+
+.butao:hover {
+    transform:scale(1.02);
+}
+
+
+section.center {
+    text-align: center;
+}
+
+.butao {
+	width:70%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    background:linear-gradient(black, #8B0000);
+	margin: 5px;
+    
+}
+
+section.padded {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input {
+    width:95%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+.butaot{
+    margin:20px;
+	width:20%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    background:linear-gradient(black, #8B0000);
+	
+}
+
+
+.butaot a{
+    color: white;
+    text-decoration: none;
+}
+
+.produtos{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin:40px;
+}
+
+.card{
+    background:white;
+padding:15px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 18px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+    width:240px;
+}
+	
+
+.preco{
+   background:#1e8449;
+color:white;
+padding:10px;
+border-radius:8px;
+font-weight:bold;
+margin-top:10px;
+    
+}
+
+

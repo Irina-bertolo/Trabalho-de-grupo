@@ -1,0 +1,108 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ginásio Element</title>
+</head>
+
+<body>
+<!--<img src="imagens/fundo.jpg" width="400">-->
+
+<header>
+<!-- MENU SUPERIOR -->
+    <div class="navbar">
+
+        <div class="logocab">Ginásio Element</div>
+
+        <nav>
+            <a href="Ginasio.html">Início</a>
+            <a href="tshirts.html">T-Shirts</a>
+            <span class="menu-icon">☰</span>
+        </nav>
+
+    </div>
+	</header>
+	
+<!--Cabeçalho-->
+<header class="header">
+	<h1>Ginásio Element</h1>
+</header>
+
+<section class="centered">
+
+<!-- COLUNA ESQUERDA -->
+<div class= "info">
+<h2>Bem-vindo ao nosso Ginásio!</h2>
+	<p><b>Morada:</b> Rua Avenida Bobadela, Nº30, 2695-123</p>
+	
+	<p><b>Horário de Funcionamento:</b><br>
+				Segundas a Sextas - 08:00h ás 18:00h<br>
+				Fins de semanas - 09:00h ás 16:00h<br>
+				Feriados - Encerrado</p>
+		
+<hr>
+
+<h2>Inscreva-se no Ginásio</h2>
+		<input type="text" placeholder="Nome">
+        <input type="email" placeholder="E-mail">
+        <input type="text" placeholder="Telefone">
+		<button class="butao">Inscrever</button>
+
+</div>
+	<hr class="linha-vertical">
+	
+	<!-- COLUNA DIREITA -->
+<div class= "info">
+
+	<h2> Aceder ás T-Shirts</h2>
+
+		<p>Introduza o seu NIF:</p>
+
+<input type="text" id="nif" maxlength="9" placeholder="NIF" oninput="validarNIF()">
+
+<button type="button" class="butao" onclick="entrar()">
+    Ver T-Shirts
+</button>
+
+<script>
+function validarNIF() {
+
+    let nifInput = document.getElementById("nif");
+    let nif = nifInput.value;
+
+    // Se tiver letras ou caracteres inválidos
+    if (!/^\d*$/.test(nif)) {
+        nifInput.style.color = "red";
+        return;
+    }
+
+    // Se tiver 9 números válidos
+    if (nif.length === 9 &&
+        nif >= 111111111 &&
+        nif <= 999999999) {
+
+        nifInput.style.color = "yellow";
+    } else {
+        nifInput.style.color = "red";
+    }
+}
+
+function entrar() {
+    let nif = document.getElementById("nif").value;
+
+    if (nif.length === 9 &&
+        nif >= 111111111 &&
+        nif <= 999999999) {
+
+        window.location.href = "tshirts.html";
+    } else {
+        alert("Introduza um NIF válido entre 111111111 e 999999999.");
+    }
+}
+</script>
+</div>
+</section>
+
+
+</body>
+</html>
